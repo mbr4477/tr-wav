@@ -54,6 +54,7 @@ class WavFileReader(
                 "cue " -> readCues(chunk)
             }
         }
+        metadata.markers.sortBy { it.position }
     }
 
     private fun readList(chunk: ByteBuffer) {
