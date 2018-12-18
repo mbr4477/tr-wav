@@ -14,8 +14,7 @@ implementation 'com.github.mbr4477:tr-wave:master-SNAPSHOT'
 ```
 ## Example
 ```kotlin
-import com.matthewrussell.trwav.Metadata
-import com.matthewrussell.trwav.WavFileReader
+import com.matthewrussell.trwav.*
 
 fun main(args: Array<String>) {
     // Read in a file
