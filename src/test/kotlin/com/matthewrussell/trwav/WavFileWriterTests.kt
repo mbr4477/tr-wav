@@ -1,5 +1,6 @@
 package com.matthewrussell.trwav
 
+import org.junit.After
 import org.junit.Assert
 import org.junit.Test
 import java.io.File
@@ -32,5 +33,10 @@ class WavFileWriterTests {
         val readFile = WavFileReader().read(outputFile)
         Assert.assertEquals(wavFile.metadata, readFile.metadata)
         Assert.assertEquals(wavFile.audio.size, readFile.audio.size)
+    }
+
+    @After
+    fun tearDown() {
+        outputFile.delete()
     }
 }
