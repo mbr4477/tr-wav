@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     // Print the file's tR metadata
     println(wavFile.metadata)
     // Update the metadata
-    waveFile.metadata.book = "gen"
+    waveFile.metadata.slug = "gen"
     // Write the file back out
     WavFileWriter().write(wavFile, File("output.wav"))
 }
