@@ -74,8 +74,11 @@ class WavFileReader(
                             val trMetadataBytes = ByteArray(chunkSize)
                             chunk.get(trMetadataBytes)
                             val jsonString = trMetadataBytes.toString(US_ASCII())
-                            metadata = metadataMapper.fromJSON(jsonString)
-                            // parse the metadata data
+                            metadata = try {
+                                metadataMapper.fromJSON(jsonString)
+                            } catch (e: Exception) {
+                                Metadata()
+                            }
                         }
                         else -> chunk.position(chunk.position() + chunkSize)
                     }

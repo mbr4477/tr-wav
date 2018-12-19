@@ -54,7 +54,8 @@ class WavFileWriter(
         return buffer.array()
     }
     private fun makeLabelChunk(cues: List<CuePoint>): ByteArray {
-        val size = (cues.size * 40) + 4 + wordAlignedLength(cues.map { it.label }.joinToString().length)
+        val size = (cues.size * 40) + 4 + cues.map { wordAlignedLength(it.label.length) }
+            .reduce { acc, next -> acc + next }
         val buffer = ByteBuffer.allocate(size + 8)
         buffer
             .order(ByteOrder.LITTLE_ENDIAN)
