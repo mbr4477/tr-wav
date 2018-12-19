@@ -1,6 +1,7 @@
-[![](https://jitpack.io/v/mbr4477/tr-wave.svg)](https://jitpack.io/#mbr4477/tr-wave)
-
 # tr-wav
+[![](https://jitpack.io/v/mbr4477/tr-wave.svg)](https://jitpack.io/#mbr4477/tr-wave)
+[![Build Status](https://travis-ci.org/mbr4477/tr-wav.svg?branch=master)](https://travis-ci.org/mbr4477/tr-wav)
+
 A Kotlin library for working with tR WAV audio file metadata. 
 Ported from the [translationRecorder Android app](https://github.com/WycliffeAssociates/translationRecorder/tree/dev/translationRecorder/app/src/main/java/org/wycliffeassociates/translationrecorder/wav).
 
